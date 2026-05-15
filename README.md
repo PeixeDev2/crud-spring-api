@@ -16,8 +16,11 @@ API REST CRUD de usuários desenvolvida com Java + Spring Boot.
 
 ## Rotas
 GET /usuarios
+
 POST /usuarios
+
 PUT /usuarios/{id}
+
 DELETE /usuarios/{id}
 
 ## Ferramentas utilizadas
