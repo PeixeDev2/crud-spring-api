@@ -20,6 +20,6 @@ public class UsuarioControleer {
     }
     @PostMapping
     public Usuario cadastrar(@RequestBody Usuario usuario) {
-        return usuario;
+        return usuarioRepository.save(usuario);
     }
 }
