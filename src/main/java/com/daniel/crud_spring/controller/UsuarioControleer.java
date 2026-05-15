@@ -1,4 +1,6 @@
 package com.daniel.crud_spring.controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.daniel.crud_spring.model.Usuario;
 import com.daniel.crud_spring.repository.UsuarioRepository;
@@ -21,5 +23,12 @@ public class UsuarioControleer {
     @PostMapping
     public Usuario cadastrar(@RequestBody Usuario usuario) {
         return usuarioRepository.save(usuario);
+    }
+    @DeleteMapping("/{id}")
+    public String deletar(@PathVariable Long id) {
+
+        usuarioRepository.deleteById(id);
+
+        return "Usuário deletado!";
     }
 }
